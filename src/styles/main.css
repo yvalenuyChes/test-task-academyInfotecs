@@ -10,10 +10,6 @@ body{
    width: 50vw;
 }
 
-.hidden{
-
-}
-
 .table__item{
    margin: 0 auto;
    padding: 20px;
@@ -32,6 +28,10 @@ body{
    font-weight: 500;
 }
 
+.table__item-description{
+   line-height: 20px;
+}
+
 .table__item-description.hidden{
    overflow: hidden;
    display: -webkit-box;
@@ -43,6 +43,10 @@ body{
 
 .table__item-description.hidden .table__item-description-button{
    position: absolute;
+}
+
+.table__filter{
+   position: fixed;
 }
 
 
