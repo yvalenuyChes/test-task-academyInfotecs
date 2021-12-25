@@ -11,13 +11,11 @@ export default function filterCards(){
    if(colFilter.value === 'name'){
       for(let i = 0; i < data.length; i++){
       tableBody.innerHTML += `
-         <li class="table__item">
-         <div>
+      <li class="table__item">
+         <div class="table__item-name">
             <h2 class="table__item-title" >
                Name:${data[i].name.firstName}
             </h2>
-         </div>
-         <div>
             <h2 class="table__item-subtitle" >
                Surname:${data[i].name.lastName}
             </h2>
@@ -47,11 +45,11 @@ export default function filterCards(){
       for(let i = 0; i < data.length; i++){
       tableBody.innerHTML += `
       <li class="table__item">
-         <div>
+         <div class="eye-color__container">
             <p>
                Eye color: <span style='color:${data[i].eyeColor}'>${data[i].eyeColor}</span>
             </p>
-          </div>
+         </div>
       </li>
       `
       }

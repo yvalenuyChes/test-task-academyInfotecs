@@ -12,7 +12,7 @@ body{
 
 .table__item{
    margin: 20px auto;
-   padding: 20px;
+   padding: 10px 20px 40px 20px;
    width: 400px;
    border: 1px solid #000;
    border-radius: 5px;
@@ -27,6 +27,10 @@ body{
    line-height: 20px;
 }
 
+.table__item-description p{
+   padding: 5px 0px;
+}
+
 .table__item-description.hidden{
    overflow: hidden;
    display: -webkit-box;
@@ -36,8 +40,20 @@ body{
     height: 40px;
 }
 
-.table__item-description.hidden .table__item-description-button{
+.table__item-description .table__item-description-button{
+   border-radius: 5px;
    position: absolute;
+   width: 120px;
+   font-size: 15px;
+   line-height: 25px;
+   color: white;
+   background-color: royalblue;
+   transition: .3s all ease;
+
+}
+
+.table__item-description .table__item-description-button:hover{
+   background-color:#00BFFF;
 }
 
 .table__filter{
@@ -46,7 +62,9 @@ body{
 
 
 .eye-color__container{
-   padding-top: 40px;
+   margin-top: 60px;
+   font-size: 20px;
+   font-weight: 500;
 }
 
 
