@@ -11,20 +11,15 @@ body{
 }
 
 .table__item{
-   margin: 0 auto;
+   margin: 20px auto;
    padding: 20px;
    width: 400px;
    border: 1px solid #000;
    border-radius: 5px;
 }
 
-.table__item-title{
+.table__item-name{
    font-size: 20px;
-   font-weight: 500;
-}
-
-.table__item-subtitle{
-   font-size: 16px;
    font-weight: 500;
 }
 
@@ -50,3 +45,12 @@ body{
 }
 
 
+.eye-color__container{
+   padding-top: 40px;
+}
+
+
+.table__item-name{
+   display: flex;
+   justify-content: space-between;
+}
