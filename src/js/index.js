@@ -1,8 +1,12 @@
 import * as data from '../store/DB.json'
-import filterCards from './filter'
+import filterCards from './hideColons'
+import dataFilter from './sort'
+import showHiddenText from './showAds'
 
+const table = document.querySelector('.table')
 const tableBody = document.querySelector('.table__body')
 const colFilter = document.querySelector('.table__filter')
+const sortSelector = table.querySelector('.table__sort-selector')
 
 
 //? получаем и выводим всех пользователей из хранилища
@@ -34,24 +38,7 @@ for(let i = 0; i < data.length; i++){
    </li>
    `
 }
-
-
-//? функция скрытия/показа текста
-
-export function showHiddenText(){
-   const showTextButtonArray = tableBody.querySelectorAll('.table__item-description-button')
-
-   for(let i = 0; i < showTextButtonArray.length; i++){
-      showTextButtonArray[i].addEventListener('click', event=> {
-         const text = event.target.closest('.table__item-description')
-         text.classList.toggle('hidden')
-      })
-   }
-}
 showHiddenText()
-
-
-//? функция сортировки колонок
 
 //! функция которая должна добавлять поля автоматически, однако можно убирать не нужные поля
 
@@ -63,9 +50,11 @@ showHiddenText()
 // }
 
 
+// colFilter.addEventListener('change', filterCards)
 
 
-colFilter.addEventListener('change', filterCards)
+
+sortSelector.addEventListener('change', dataFilter)
 
 
 
