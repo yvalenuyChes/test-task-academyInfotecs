@@ -80,3 +80,30 @@ body{
    /* position: absolute;
    right: 0; */
 }
+
+.table__editing-button{
+   cursor: pointer;
+   position: relative;
+   right: 0;
+   height: 10px;
+   width: 10px;
+}
+
+.table__editing-button::before,
+.table__editing-button::after{
+   position: absolute;
+   content: '';
+   height: 2px;
+   width: 10px;
+   background-color: black;
+   color: black;
+}
+
+.table__editing-button::before{
+   top: 3px;
+ transform: rotate(90deg);
+}
+
+.table__editing-button::after{
+   top: 3px;
+}
