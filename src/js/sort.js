@@ -6,7 +6,7 @@ import showHiddenText from './showAds'
 const tableBody = document.querySelector('.table__body')
 
 
-export function dataFilter(){
+export function dataSort(){
    tableBody.innerHTML = ''
    const arr = data.sort((a,b) => a.eyeColor > b.eyeColor ? 1 : -1)
    
@@ -46,10 +46,9 @@ export function dataFilter(){
 }
 
 
-export function nameFilter(){
+export function nameSort(){
    tableBody.innerHTML = ''
    const arr = data.sort((a,b) => a.name.firstName > b.name.firstName ? 1 : -1)
-
 
     for(let i = 0; i < arr.length; i++){
       tableBody.innerHTML += `
@@ -88,10 +87,9 @@ export function nameFilter(){
 
 
 
-export function surnameFilter(){
+export function surnameSort(){
    tableBody.innerHTML = ''
    const arr = data.sort((a,b) => a.name.lastName > b.name.lastName ? 1 : -1)
-
 
     for(let i = 0; i < arr.length; i++){
       tableBody.innerHTML += `

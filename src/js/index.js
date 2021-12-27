@@ -1,27 +1,38 @@
 
-import filterCards from './hideColons'
-import {dataFilter, nameFilter, surnameFilter} from './sort'
+import {dataSort, nameSort, surnameSort} from './sort'
 import getInitialData from './getInitialData'
 
 
-// const colFilter = document.querySelector('.table__filter')
 const table = document.querySelector('.table')
-const sortButton = table.querySelector('.eye-color')
+const defaultSortButton = table.querySelector('.default-sort')
+const eyeColorSortButton = table.querySelector('.eye-color')
 const nameSortButton = table.querySelector('.name')
 const surnameSortButton = table.querySelector('.surname')
 
 //? получаем и выводим всех пользователей из хранилища
 
-
-
 getInitialData()
 
 
-sortButton.addEventListener('click', dataFilter)
-nameSortButton.addEventListener('click', nameFilter)
-surnameSortButton.addEventListener('click', surnameFilter)
+//? добавляем кнопкам события сортировки
 
-//? функция скрытия/показа колонки
 
-// colFilter.addEventListener('change', filterCards)
+defaultSortButton.addEventListener('click', getInitialData)
+eyeColorSortButton.addEventListener('click', dataSort)
+nameSortButton.addEventListener('click', nameSort)
+surnameSortButton.addEventListener('click', surnameSort)
 
+
+//? функция фильтрации колонок
+
+const container = document.querySelector('.table__filter')
+
+
+container.addEventListener('click', event =>{
+   const value = event.target.value
+   const arr = document.querySelectorAll(`${value}`)
+   for(let i = 0; i < arr.length; i++){
+      arr[i].classList.toggle('hide')
+   }
+   event.target.classList.toggle('active')
+})

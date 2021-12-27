@@ -12,18 +12,33 @@
 </head>
 <body>
    <div class="table">
-         <!-- <select class="table__filter">
-            <option value=""></option>
-         </select> -->
-         <!-- <select class="table__filter">
-            <option value=""></option>
-            <option value="name">Name</option>
-            <option value="about">About</option>
-            <option value="eyeColor">Eye color</option>
-         </select> -->
-      <button class="table__sort-button eye-color" value="eyeColor">Eye color</button> 
-      <button class="table__sort-button name" value="firstName">Name</button>
-      <button class="table__sort-button surname" value="name.lastName">Surname</button>
+         <div class="table__filter controls">
+            <h2>Hide colums:</h2>
+            <div class="table__button-container">
+               <button value=".table__item-name" class="table__button">Name</button>
+            </div>
+            <div class="table__button-container">
+               <button value=".table__item-description" class="table__button">About</button>
+            </div>
+            <div class="table__button-container">
+               <button value=".eye-color__container" class="table__button">Eye color</button>
+            </div>
+         </div>
+         <div class="table__sort controls">
+            <h2>Sort by:</h2>
+            <div class="table__button-container">
+               <button class="table__sort-button default-sort table__button">Default</button> 
+            </div>
+            <div class="table__button-container">
+               <button class="table__sort-button eye-color table__button">Eye color</button> 
+            </div>
+            <div class="table__button-container">
+               <button class="table__sort-button name table__button">Name</button>
+            </div>
+            <div class="table__button-container">
+               <button class="table__sort-button surname table__button">Surname</button>
+            </div>
+         </div>
       <ul class="table__body"></ul>
    </div>
    <script src="../dist//js//bundle.js"></script>

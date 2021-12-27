@@ -8,6 +8,7 @@ body{
    margin: 0 auto;
    padding: 0 20px;
    width: 50vw;
+   position: relative;
 }
 
 .table__item{
@@ -56,9 +57,6 @@ body{
    background-color:#00BFFF;
 }
 
-.table__filter{
-   position: fixed;
-}
 
 
 .eye-color__container{
@@ -73,15 +71,7 @@ body{
    justify-content: space-between;
 }
 
-
-.table__sort-button{
-   width: 100px;
-   height: 50px;
-   /* position: absolute;
-   right: 0; */
-}
-
-.table__editing-button{
+/* .table__editing-button{
    cursor: pointer;
    position: relative;
    right: 0;
@@ -106,4 +96,55 @@ body{
 
 .table__editing-button::after{
    top: 3px;
+} */
+
+.table__filter{
+   position: fixed;
+   left: 50px;
+}
+
+.table__sort{
+   position: fixed;
+   right: 50px;
+}
+
+
+/* .table__button-container{
+
+} */
+
+.table__button{
+   color: white;
+   border-radius: 5px;
+   width: 100px;
+   line-height: 24px;
+   font-size: 18px;
+   font-weight: 500;
+   margin: 10px 0px;
+   background-color: royalblue;
+   transition: .5s all ease;
+}
+
+.table__button:hover{
+   background-color:#00BFFF;
+}
+
+.table__button.active{
+   background-color: red;
+}
+
+
+.table__button.active:hover{
+   background-color: #8B0000;
+}
+
+.controls{
+   text-align: center;
+   font-size: 20px;
+}
+
+
+
+.hide{
+   display: none !important;
 }

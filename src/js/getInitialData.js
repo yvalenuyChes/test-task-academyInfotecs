@@ -4,9 +4,10 @@ import showHiddenText from './showAds'
 const tableBody = document.querySelector('.table__body')
 
 export default function getInitialData(){
+   tableBody.innerHTML = ''
    for(let i = 0; i < data.length; i++){
       tableBody.innerHTML += `
-      <li class="table__item" >
+      <li class="table__item">
       <div class="table__item-name">
          <div class="table__item-title">
             <h2>
@@ -28,7 +29,7 @@ export default function getInitialData(){
                Learn more
             </button>
          </div>
-         <div class="eye-color__container table__container">
+         <div class="eye-color__container">
             <p>
                Eye color: <span style='color:${data[i].eyeColor}'>${data[i].eyeColor}</span>
             </p>
