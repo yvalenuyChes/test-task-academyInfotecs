@@ -65,11 +65,12 @@ for(let i = 0; i < editingButtonArr.length; i++){
 }
 
 const saveButtonsArr = table.querySelectorAll('.save-button')
-const eyeInput = table.querySelector('.input__eye-color')
+const eyeInputArr = table.querySelectorAll('.input__eye-color')
 
 for(let i = 0; i < saveButtonsArr.length; i++){
+   
    saveButtonsArr[i].addEventListener('click', event =>{
-      data[i].eyeColor = eyeInput.value
+      data[i].eyeColor = eyeInputArr[i].value
       getInitialData()
       const container = event.target.closest('.editing')
       container.classList.add('hide')
