@@ -13,6 +13,8 @@ const surnameSortButton = table.querySelector('.surname')
 
 const container = document.querySelector('.table__filter')
 
+
+
 //? получаем и выводим всех пользователей из хранилища
 
 getInitialData()
@@ -38,7 +40,7 @@ container.addEventListener('click', event =>{
    event.target.classList.toggle('active')
 
 
-
+   //! убираем видимость кнопок, которые не должны отображаться при фильтрации значений
    if(event.target.value === '.eye-color__container'){
       eyeColorSortButton.classList.toggle('hide')
    }else if(event.target.value === '.table__item-name'){
@@ -46,3 +48,17 @@ container.addEventListener('click', event =>{
       surnameSortButton.classList.toggle('hide')
    }
 })
+
+
+//? редактирование колонок
+
+
+const editingButtonArr = table.querySelectorAll('.edit_button')
+
+for(let i = 0; i < editingButtonArr.length; i++){
+   editingButtonArr[i].addEventListener('click', event =>{
+      const item = event.target.closest('.table__item')
+      item.querySelector('.editing').classList.toggle('hide')
+   })
+}
+

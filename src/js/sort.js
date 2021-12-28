@@ -1,7 +1,7 @@
 //? функция сортировки колонок
 
 
-import * as data from '../store/DB.json'
+import data from '../store/DB.json'
 import showHiddenText from './showAds'
 
 
