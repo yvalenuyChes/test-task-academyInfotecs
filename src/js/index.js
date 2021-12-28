@@ -8,6 +8,7 @@ const defaultSortButton = table.querySelector('.default-sort')
 const eyeColorSortButton = table.querySelector('.eye-color')
 const nameSortButton = table.querySelector('.name')
 const surnameSortButton = table.querySelector('.surname')
+const container = document.querySelector('.table__filter')
 
 //? получаем и выводим всех пользователей из хранилища
 
@@ -24,9 +25,6 @@ surnameSortButton.addEventListener('click', surnameSort)
 
 
 //? функция фильтрации колонок
-
-const container = document.querySelector('.table__filter')
-
 
 container.addEventListener('click', event =>{
    const value = event.target.value
