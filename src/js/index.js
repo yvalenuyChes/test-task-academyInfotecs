@@ -1,3 +1,5 @@
+import data from '../store/DB.json'
+
 
 import {dataSort, nameSort, surnameSort} from './sort'
 import getInitialData from './getInitialData'
@@ -59,6 +61,18 @@ for(let i = 0; i < editingButtonArr.length; i++){
    editingButtonArr[i].addEventListener('click', event =>{
       const item = event.target.closest('.table__item')
       item.querySelector('.editing').classList.toggle('hide')
+   })
+}
+
+const saveButtonsArr = table.querySelectorAll('.save-button')
+const eyeInput = table.querySelector('.input__eye-color')
+
+for(let i = 0; i < saveButtonsArr.length; i++){
+   saveButtonsArr[i].addEventListener('click', event =>{
+      data[i].eyeColor = eyeInput.value
+      getInitialData()
+      const container = event.target.closest('.editing')
+      container.classList.add('hide')
    })
 }
 

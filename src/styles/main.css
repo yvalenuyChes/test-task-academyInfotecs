@@ -149,4 +149,17 @@ body{
 .editing-name{
    font-size: 20px;
    font-weight: 500;
+   display: flex;
+   justify-content: space-between;
+}
+
+.editing-name .input{
+   width: 150px;
+   height: 40px;
+   font-size: 20px;
+}
+
+
+.editing textarea{
+   width: 100%;
 }

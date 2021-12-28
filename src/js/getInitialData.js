@@ -43,10 +43,10 @@ export default function getInitialData(){
       <div class="editing hide">
          <div class="editing-name">
             <div class="editing-title">
-               <input value=${data[i].name.firstName} placeholder="Name"/>
+               <input value=${data[i].name.firstName} placeholder="Name" class="input"/>
             </div>
             <div class="editing-subtitle">
-               <input value=${data[i].name.lastName} placeholder="Surname" />
+               <input value=${data[i].name.lastName} placeholder="Surname" class="input" />
             </div>   
             </div>
             <div class="editing-description hidden">
@@ -54,7 +54,7 @@ export default function getInitialData(){
             </div>
             <div class="eye-color__container">
                <div>
-                  Eye color: <input value = ${data[i].eyeColor} placeholder="Eye color" />
+                  Eye color: <input value = ${data[i].eyeColor} placeholder="Eye color" class="input__eye-color" />
                </div>
                <div class="editing-save">
                   <button class="save-button table__button">Save</button>
