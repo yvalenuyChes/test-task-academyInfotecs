@@ -2,7 +2,7 @@ import data from '../store/DB.json'
 
 
 import {dataSort, nameSort, surnameSort} from './sort'
-import getInitialData from './getInitialData'
+import getDefaultData from './getInitialData'
 
 
 const table = document.querySelector('.table')
@@ -19,13 +19,13 @@ const container = document.querySelector('.table__filter')
 
 //? получаем и выводим всех пользователей из хранилища
 
-getInitialData()
+getDefaultData()
 
 
 //? добавляем кнопкам события сортировки
 
 
-defaultSortButton.addEventListener('click', getInitialData)
+defaultSortButton.addEventListener('click', getDefaultData)
 eyeColorSortButton.addEventListener('click', dataSort)
 nameSortButton.addEventListener('click', nameSort)
 surnameSortButton.addEventListener('click', surnameSort)
@@ -51,29 +51,4 @@ container.addEventListener('click', event =>{
    }
 })
 
-
-//? редактирование колонок
-
-
-const editingButtonArr = table.querySelectorAll('.edit_button')
-
-for(let i = 0; i < editingButtonArr.length; i++){
-   editingButtonArr[i].addEventListener('click', event =>{
-      const item = event.target.closest('.table__item')
-      item.querySelector('.editing').classList.toggle('hide')
-   })
-}
-
-const saveButtonsArr = table.querySelectorAll('.save-button')
-const eyeInputArr = table.querySelectorAll('.input__eye-color')
-
-for(let i = 0; i < saveButtonsArr.length; i++){
-   
-   saveButtonsArr[i].addEventListener('click', event =>{
-      data[i].eyeColor = eyeInputArr[i].value
-      getInitialData()
-      const container = event.target.closest('.editing')
-      container.classList.add('hide')
-   })
-}
 

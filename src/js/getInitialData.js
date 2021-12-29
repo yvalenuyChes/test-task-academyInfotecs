@@ -1,9 +1,12 @@
 import data from '../store/DB.json'
+import colonsEditing from './editingColon'
 import showHiddenText from './showAds'
 
 const tableBody = document.querySelector('.table__body')
+const table = document.querySelector('.table')
 
-export default function getInitialData(){
+export default function getDefaultData(){
+
    tableBody.innerHTML = ''
    for(let i = 0; i < data.length; i++){
       tableBody.innerHTML += `
@@ -64,5 +67,16 @@ export default function getInitialData(){
       </li>
       `
    }
+
+   const editingButtonArr = table.querySelectorAll('.edit_button')
+
+
+   for(let i = 0; i < editingButtonArr.length; i++){
+      editingButtonArr[i].addEventListener('click', event =>{
+         const parentNode = event.target.closest('.table__item')
+         parentNode.querySelector('.editing').classList.toggle('hide')
+      })
+   }
    showHiddenText()
+   colonsEditing()
 }
