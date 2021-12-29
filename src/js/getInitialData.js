@@ -49,15 +49,15 @@ export default function getDefaultData(){
                <input value=${data[i].name.firstName} placeholder="Name" class="input input__name"/>
             </div>
             <div class="editing-subtitle">
-               <input value=${data[i].name.lastName} placeholder="Surname" class="input input__surname" />
+               <input value=${data[i].name.lastName} placeholder="Surname" class="input input__surname"/>
             </div>   
             </div>
             <div class="editing-description hidden">
                <textarea placeholder="About" class="textarea-about"></textarea>
             </div>
             <div class="eye-color__container">
-               <div>
-                  Eye color: <input value = ${data[i].eyeColor} placeholder="Eye color" class="input__eye-color" />
+               <div class="eye-color__text">
+                  Eye color: <input value = ${data[i].eyeColor} placeholder="Eye color" class="input__eye-color"/>
                </div>
                <div class="editing-save">
                   <button class="save-button table__button">Save</button>

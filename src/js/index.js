@@ -1,6 +1,4 @@
-import data from '../store/DB.json'
-
-
+import '../styles/main.scss'
 import {dataSort, nameSort, surnameSort} from './sort'
 import getDefaultData from './getInitialData'
 
@@ -13,8 +11,9 @@ const eyeColorSortButton = table.querySelector('.eye-color')
 const nameSortButton = table.querySelector('.name')
 const surnameSortButton = table.querySelector('.surname')
 
-const container = document.querySelector('.table__filter')
+const tableFilter = document.querySelector('.filter__buttons')
 
+const tableSort = document.querySelector('.table__sort')
 
 
 //? получаем и выводим всех пользователей из хранилища
@@ -33,7 +32,8 @@ surnameSortButton.addEventListener('click', surnameSort)
 
 //? функция фильтрации колонок
 
-container.addEventListener('click', event =>{
+tableFilter.addEventListener('click', event =>{
+   const children = tableFilter.children
    const value = event.target.value
    const arr = document.querySelectorAll(`${value}`)
    for(let i = 0; i < arr.length; i++){
@@ -41,13 +41,13 @@ container.addEventListener('click', event =>{
    }
    event.target.classList.toggle('active')
 
-
-   //! убираем видимость кнопок, которые не должны отображаться при фильтрации значений
-   if(event.target.value === '.eye-color__container'){
-      eyeColorSortButton.classList.toggle('hide')
-   }else if(event.target.value === '.table__item-name'){
-      nameSortButton.classList.toggle('hide')
-      surnameSortButton.classList.toggle('hide')
+   for(let i = 0; i < children.length; i++){
+    if(children[i].classList.contains('active')){
+      tableSort.classList.add('hide')
+      break
+    }else{
+      tableSort.classList.remove('hide')
+    }
    }
 })
 
