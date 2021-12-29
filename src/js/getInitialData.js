@@ -46,14 +46,14 @@ export default function getDefaultData(){
       <div class="editing hide">
          <div class="editing-name">
             <div class="editing-title">
-               <input value=${data[i].name.firstName} placeholder="Name" class="input"/>
+               <input value=${data[i].name.firstName} placeholder="Name" class="input input__name"/>
             </div>
             <div class="editing-subtitle">
-               <input value=${data[i].name.lastName} placeholder="Surname" class="input" />
+               <input value=${data[i].name.lastName} placeholder="Surname" class="input input__surname" />
             </div>   
             </div>
             <div class="editing-description hidden">
-               <textarea placeholder="About"></textarea>
+               <textarea placeholder="About" class="textarea-about"></textarea>
             </div>
             <div class="eye-color__container">
                <div>
