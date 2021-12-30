@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1"
   }
 }

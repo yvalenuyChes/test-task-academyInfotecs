@@ -6,7 +6,7 @@ const tableBody = document.querySelector('.table__body')
 const table = document.querySelector('.table')
 
 export default function getDefaultData(){
-
+   //! выводим данные и делаем их отображение
    tableBody.innerHTML = ''
    for(let i = 0; i < data.length; i++){
       tableBody.innerHTML += `
@@ -42,7 +42,7 @@ export default function getDefaultData(){
             </div>
       </div>
 
-
+      //! добавляем блок редактирования формы
       <div class="editing hide">
          <div class="editing-name">
             <div class="editing-title">
@@ -67,7 +67,7 @@ export default function getDefaultData(){
       </li>
       `
    }
-
+   //! вешаем событие для всех кнопок edit, чтобы открывалась форма редатирования
    const editingButtonArr = table.querySelectorAll('.edit_button')
 
 
@@ -77,6 +77,8 @@ export default function getDefaultData(){
          parentNode.querySelector('.editing').classList.toggle('hide')
       })
    }
+   //! запускаем функцию для того чтобы текст в блоках раскрывался
    showHiddenText()
+   //! запускаем функцию которая будет сохранять данные в блоках редактирования
    colonsEditing()
 }

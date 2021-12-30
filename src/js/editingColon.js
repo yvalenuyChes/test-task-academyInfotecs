@@ -8,6 +8,7 @@ import getDefaultData from './getInitialData'
 const table = document.querySelector('.table')
 
 
+//! функция которая перезаписывает данные с форм редактирования и отображает измененные данные
 
 export default function colonsEditing(){
 
