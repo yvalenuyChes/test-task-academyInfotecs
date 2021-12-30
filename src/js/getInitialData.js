@@ -42,7 +42,6 @@ export default function getDefaultData(){
             </div>
       </div>
 
-      //! добавляем блок редактирования формы
       <div class="editing hide">
          <div class="editing-name">
             <div class="editing-title">
@@ -53,7 +52,7 @@ export default function getDefaultData(){
             </div>   
             </div>
             <div class="editing-description hidden">
-               <textarea placeholder="About" class="textarea-about"></textarea>
+               <textarea placeholder="If you do not want change 'about' information please copy it from origin data" class="textarea-about"></textarea>
             </div>
             <div class="eye-color__container">
                <div class="eye-color__text">
